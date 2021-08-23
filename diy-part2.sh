@@ -19,9 +19,6 @@ sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_genera
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
 # themes添加（svn co 命令意思：指定版本如https://github）
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-make menuconfig #choose LUCI->Theme->Luci-theme-argon  
-make -j1 V=s
 
 # Modify hostname
 sed -i 's/OpenWrt/AX6/g' package/base-files/files/bin/config_generate
