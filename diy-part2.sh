@@ -21,6 +21,9 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package
 # themes添加（svn co 命令意思：指定版本如https://github）
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
+# Modify hostname
+sed -i 's/OpenWrt/AX6/g' package/base-files/files/bin/config_generate
+
 #添加额外非必须软件包
 git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
 
